@@ -11,9 +11,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-    private final StudentService studentService;
+    private StudentServiceCollection studentService;
 
-    public StudentController(StudentService studentService) {
+    public StudentController(StudentServiceCollection studentService) {
         this.studentService= studentService;
     }
     @GetMapping

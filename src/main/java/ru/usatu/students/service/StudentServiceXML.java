@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 public class StudentServiceXML implements StudentService {
-    private static final String FILE_PATH = "F:\\projects\\students2\\src\\main\\resources\\students.xml";
+    private static final String FILE_PATH = "C:\\Users\\arsla\\IdeaProjects\\students\\src\\main\\resources\\students.xml";
 
     @Override
     public List<Student> getStudents() throws Exception {
@@ -22,7 +22,7 @@ public class StudentServiceXML implements StudentService {
 
     }
 @Override
-    public Student getStudent(int id) throws Exception{
+    public Student getStudent(int id) throws Exception {
         return getStudents().stream().filter(student -> student.getId()==id)
                 .findFirst().orElse(new Student());
 
@@ -37,8 +37,8 @@ public class StudentServiceXML implements StudentService {
 }
 
    @Override
-    public Student editStudent(int id,String name) throws Exception{
-        Studentlist studentList = getStudentList();
+    public Student editStudent(int id,String name) throws Exception {
+        StudentList studentList = getStudentList();
         Student findStudent = studentList.getStudents().stream().filter(student -> student.getId() == id)
                 .findFirst().orElse(null);
         if (findStudent == null){
@@ -50,7 +50,7 @@ public class StudentServiceXML implements StudentService {
     }
 
     @Override
-    public void deleteStudent(int id) throws Exception{
+    public void deleteStudent(int id) throws Exception {
         StudentList studentList = getStudentList();
         Student findStudent = studentList.getStudents().stream().filter(student -> student.getId() == id)
                 .findFirst().orElse(null);
@@ -62,8 +62,8 @@ public class StudentServiceXML implements StudentService {
     private StudentList getStudentList() throws Exception{
         File file = new File(FILE_PATH);
         JAXBContext context = JAXBContext.newInstance(StudentList.class);
-        Unmarshaller unmarshaller = context.createUnmarshaller();
-        return (StudentList) unmarshaller.unmarshal(file);
+        Unmarshaller unMarshaller = context.createUnmarshaller();
+        return (StudentList) unMarshaller.unmarshal(file);
 
     }
     private void save(StudentList studentList) throws Exception{
