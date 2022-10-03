@@ -28,14 +28,6 @@ public class StudentServiceXML implements StudentService {
 
 }
 
-    public Student editStudent(int id, String name) {
-        return null;
-    }
-
-    public void deleteStudent(int id) {
-
-    }
-
     @Override
     public Student addStudent(Student student) throws Exception {
         StudentList studentList = getStudentList();
