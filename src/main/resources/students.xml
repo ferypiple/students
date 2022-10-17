@@ -2,7 +2,7 @@
 <students>
     <student>
         <id>1</id>
-        <name>Боброва Марианна Михайловна</name>
+        <name>Арслан</name>
     </student>
     <student>
         <id>2</id>
@@ -17,7 +17,11 @@
         <name>Уткин Дмитрий Романович</name>
     </student>
     <student>
-        <id>1</id>
-        <name>Лукина Ульяна Артемьевна</name>
+        <id>5</id>
+        <name>Андрей</name>
+    </student>
+    <student>
+        <id>5</id>
+        <name>Андрей</name>
     </student>
 </students>
