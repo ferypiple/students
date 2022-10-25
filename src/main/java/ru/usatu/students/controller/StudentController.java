@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import ru.usatu.students.model.Student;
 import ru.usatu.students.service.StudentService;
+import ru.usatu.students.service.StudentServiceDb;
 import ru.usatu.students.service.StudentServiceXML;
 
 import java.util.List;
@@ -11,9 +12,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 public class StudentController {
-    private StudentServiceXML studentService;
+    private StudentServiceDb studentService;
 
-    public StudentController(StudentServiceXML studentService) {
+    public StudentController(StudentServiceDb studentService) {
         this.studentService= studentService;
     }
     @GetMapping

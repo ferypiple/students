@@ -2,7 +2,7 @@
 <students>
     <student>
         <id>1</id>
-        <name>Арслан</name>
+        <name>Иванов Иван Иванович</name>
     </student>
     <student>
         <id>2</id>
@@ -15,13 +15,5 @@
     <student>
         <id>4</id>
         <name>Уткин Дмитрий Романович</name>
-    </student>
-    <student>
-        <id>5</id>
-        <name>Андрей</name>
-    </student>
-    <student>
-        <id>5</id>
-        <name>Андрей</name>
     </student>
 </students>
