@@ -21,12 +21,12 @@ public class StudentServiceXML implements StudentService {
         return getStudentList().getStudents();
 
     }
-@Override
+    @Override
     public Student getStudent(int id) throws Exception {
         return getStudents().stream().filter(student -> student.getId()==id)
                 .findFirst().orElse(new Student());
 
-}
+    }
 
     @Override
     public Student addStudent(Student student) throws Exception {
@@ -34,9 +34,9 @@ public class StudentServiceXML implements StudentService {
         studentList.getStudents().add(student);
         save(studentList);
         return student;
-}
+    }
 
-   @Override
+    @Override
     public Student editStudent(int id,String name) throws Exception {
         StudentList studentList = getStudentList();
         Student findStudent = studentList.getStudents().stream().filter(student -> student.getId() == id)
